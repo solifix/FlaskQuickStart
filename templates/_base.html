@@ -1,0 +1,31 @@
+<!DOSTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Дім інструментів{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <ul>
+            <li>
+                <a href="/">Головна</a>
+            </li>
+            <li>
+               <a href="{{ url_for('login') }}">Авторізація</a>
+            </li>
+            <li>
+               <a href="{{ url_for('register') }}">Руєстрація</a>
+            </li>
+            <li>
+            <a href="{{ url_for('users') }}">Користувачі</a>
+            </li>
+            <li>
+            <a href="{{ url_for('about') }}">Інформація про компанію</a>
+            </li>
+        </ul>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</body>

@@ -1,0 +1,13 @@
+{% extends "_base.html" %}
+
+{% block title %}Список користувачів{% endblock %}
+
+{% block content %}
+    <ul>
+        {% for user in users %}
+        <li>
+            <a href="{{ url_for('user', username=user) }}">{{ user }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

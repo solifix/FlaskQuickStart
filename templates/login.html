@@ -1,0 +1,16 @@
+{% extends "_base.html" %}
+
+{% block title %}Авторизація - {{ super() }}{% endblock %}
+
+{% block content %}
+    <h1>Login</h1>
+    <form method="post">
+        <label for="username">Username:</label>
+        <input id="username" type="text" name="username" required>
+
+        <label for="password">Password:</label>
+        <input id="password" type="password" name="password" required>
+
+        <button type="submit">Submit</button>
+    </form>
+{% endblock %}
